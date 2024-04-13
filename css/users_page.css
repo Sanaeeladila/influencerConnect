@@ -1,0 +1,489 @@
+/*importation des polices*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&display=swap');
+html:focus-within {
+  scroll-behavior: smooth;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+	margin: 0;
+	background: whitesmoke;
+	font-family: 'Work Sans', sans-serif;
+}
+/* styler le bouton arrow-up */
+.btni{
+    height: 55px;
+    width: 55px;
+    background: goldenrod;
+    opacity: 0.5;
+    border-radius: 50%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btni:hover{
+    opacity: 0.8;
+}
+.iconei{
+    width: 50px;
+}
+/* fin styler le bouton arrow-up */
+/* style de la barre de navigation */
+header {
+  background-color: #050505;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 76px;
+  z-index: 1000;
+  top:0; left:0; right:0;
+}
+.logo{
+  margin-left: 6rem;
+  float : left;
+  font-family: 'Dancing Script', 'cursive';
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+/* style de la barre de navigation */
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 2em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+   position: absolute;
+}
+  
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+  
+.nav-toggle-label span::after {
+  top: 7px;
+}
+  
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: #050505;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+  
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+  
+nav li {
+  margin-bottom: 1em;
+   margin-left: 1em;
+}
+  
+nav a {
+  position: relative;
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-family: 'Montserrat', sans-serif;
+        text-transform: uppercase;
+        padding: 0 9px;
+    }
+  nav a:after{
+        content: '';
+        position: absolute;
+        height: 2px;
+        background: white;
+        position: absolute;
+        width: 0;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        transition: 0.3s;
+    }
+  
+  nav a:hover:after {
+        width: 100%;
+    } 
+  
+  .nav-toggle:checked ~ nav {
+    transform: scale(1,1);
+  }
+  
+  .nav-toggle:checked ~ nav a {
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+  }
+  
+@media screen and (min-width: 889px) {
+  .nav-toggle-label {
+      display: none;
+  }
+  
+  header {
+      display: grid;
+      grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+    
+  .logo {
+      grid-column: 2 / 4;
+  }
+    
+  nav {
+      position: relative;
+      text-align: left;
+      transition: none;
+      transform: scale(1,1);
+      background: none;
+      top: initial;
+      left: initial;
+      grid-column: 3 / 4;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+    
+  nav ul {
+    display: flex;
+  }
+    
+  nav li {
+      margin-left: 3em;
+      margin-bottom: 0;
+  }
+    
+  nav a {
+      opacity: 1;
+      position: relative;
+  }
+    
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+      transform: scale(1,1);
+  }
+}
+/* fin style de la barre de navigation */
+/*footer*/
+.footer-basic {
+    padding-top: 4vh;
+    padding-bottom: 4vh;
+    background-color:#050505;
+    color:white;
+}
+  
+.footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+}
+.footer-basic li {
+    padding:0 10px;
+  }
+  
+.footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+}
+  
+.footer-basic ul a:hover {
+    opacity:1;
+}
+  
+.footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+}
+  
+.footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:0.5px solid #ccc;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+}
+.list-inline-item{
+    display: inline-block;
+    margin-right: 1rem;
+}
+  
+.footer-basic .social > a:hover {
+    opacity:0.9;
+}
+  
+.footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:white;
+    margin-bottom:0;
+}
+/*fin de style footer*/
+/* style de profil des users */
+.field .users_p .btnx{
+    border: 0.15em solid goldenrod;
+    font-family: 'Merienda';
+    color: #050505 ;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;   
+}
+.btnx:hover{
+  background-color: goldenrod;
+}
+main{
+  margin-top: 4rem;
+} 
+.user_sec{
+  align-items: center;
+  height: 100vh;
+  padding-top:10vh;
+  padding-bottom: 16vh;
+  background-color: whitesmoke;
+}
+.title_user{
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Merienda';
+  color: goldenrod;
+}
+.form img{
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border: 5px solid #fff;
+}
+.wrapper{ /*The main wrapper*/
+  display: flex;
+  margin: 0 auto;
+  background: #fff;
+  max-width: 450px;
+  padding: 2px 2px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 2px 2px 10px #050505;
+}
+.user_h1{
+  text-align: center;
+  font-family: 'Merienda';
+  font-size: 25px;
+  font-weight: 600;
+  margin-top: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e6e6e6;
+}
+.form{
+  padding: 25px 30px;
+}
+
+.form form{
+  margin: 20px 0;
+}
+.form form .name-details{
+  display: flex;
+}
+.form .name-details .field:first-child{
+  margin-right: 10px;
+}
+.form .name-details .field:last-child{
+  margin-left: 10px;
+}
+.form form .field{
+  display: flex;
+  margin-bottom: 10px;
+  flex-direction: column;
+  position: relative;
+}
+.form form .field label{
+  margin-bottom: 2px;
+}
+.form form .input input{
+  height: 40px;
+  width: 100%;
+  font-size: 16px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+.form form .field input{
+  outline: none;
+}
+.form form .image input{
+  font-size: 15px;
+}
+.form form .button input{
+  height: 45px;
+  border: none;
+  color: #fff;
+  font-size: 17px;
+  background: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 13px;
+}
+.form form .field i{
+  position: absolute;
+  right: 15px;
+  top: 70%;
+  color: #ccc;
+  cursor: pointer;
+  transform: translateY(-50%);
+}
+.form form .field i.active::before{
+  color: #333;
+  content: "\f070";
+}
+.field .users_p{
+  font-family: 'Merienda';
+  font-size: 15px;
+  color: #050505;
+  text-align: center
+}
+
+/* fin de la page de profil des utilisateurs */
+/* styler le tableau de bord */  
+#nav_admin{
+  margin-top: 4rem;
+  margin-left: 15rem;
+  margin-right: 10rem;
+  margin-bottom: 4rem;
+  text-align: center;
+  padding: 1.5rem 0rem 1.5rem 0rem;
+  border-radius: 6rem;
+  width: 60%;
+  height:70%;
+  background-color: #8a307f;
+}
+
+  
+.nav_admin-nav{
+  list-style: none;
+}
+.nav_admin-link{
+  margin-right: 2rem;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  font-size: 24px;
+  font-family: 'Merienda';
+  overflow: hidden;
+  letter-spacing: 1px;
+  text-align: center;
+}
+.nav_admin-link:hover{
+  color: #333;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+
+@media screen and (max-width: 768px){
+  .wrapper{
+   width: 95%;
+   max-width: 450px; 
+  }
+  .form img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid #fff;
+  }
+  #nav_admin{
+    margin: auto;
+    width: 95%;
+    text-align: center;
+    padding: 1.5rem 0rem 1.5rem 0rem;
+    border-radius: 6rem;
+    height:70%;
+    background-color: #8a307f;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+  .nav_admin-nav{
+    list-style: none;
+  }
+  .nav_admin-link{
+    margin-right: 2rem;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 22.5px;
+    font-family: 'Merienda';
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+  .nav_admin-link:hover{
+    color: #333;
+    letter-spacing: 1px;
+    transition: 0.5s;
+  }
+}
+/* fin de style de la div de tableau de bord */

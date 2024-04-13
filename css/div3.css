@@ -1,0 +1,525 @@
+
+/* importer les polices */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+@import url('href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300&display=swap');
+
+/* pour obtenir un effet de défilement fluide */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+  
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/* styler le body */
+
+body {
+	margin: 0;
+	background: white;
+	font-family: 'Work Sans', sans-serif;
+}
+/* styler la section types de la page types.php */
+#types{
+  padding-top: 49vh;
+  padding-bottom: 49vh;
+  text-align: center;
+  font-size: 12px;
+  background-image:
+  linear-gradient(
+    75deg,
+    #8a307f,
+    #17202E,
+    whitesmoke
+  );
+}
+/* fin de style de la section types de la page types.php */
+
+/* styller les bouttons */
+.btni{
+  height: 55px;
+  width: 55px;
+  background: goldenrod;
+  opacity: 0.5;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.btni:hover{
+  opacity: 0.8;
+}
+.iconei{
+  width: 50px;
+}
+.button_1{
+  background-color: #829079;
+  border: 0.15em solid #829079;
+  color: white ;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  margin: 1.8rem;
+  text-align: center;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;   
+}
+.button_3a{
+ margin-left: 10em;
+}
+.button_3b{
+ margin-right: 10em;
+}
+.button_3a, .button_3b{
+ background-color: #829079;
+ border: 0.15em solid #829079;
+ color: white ;
+ border-radius: 2rem;
+ padding: 1rem 3rem;
+ text-align: center;
+ display: inline-block;
+ font-size: 20px;
+ cursor: pointer;  
+ transition: background-color 250ms ;
+ letter-spacing: 0.5px;
+ transition: 0.5s;
+}
+.button_3a:hover , .button_3b:hover{
+ background-color: #050505;
+ border: 0.15em solid #050505;
+ letter-spacing: 1px;
+ color: white ;
+}
+.button_4{
+ background-color: white;
+ border: 0.15em solid white;
+ color: #A39884 ;
+ border-radius: 2rem;
+ padding: 1rem 3rem;
+ text-align: center;
+ display: inline-block;
+ font-size: 20px;
+ cursor: pointer;  
+ transition: background-color 250ms ;
+ letter-spacing: 1px;
+ transition: 0.5s;
+}
+.button_4:hover{
+ background-color: #050505;
+ border: 0.15em solid #050505;
+ letter-spacing: 2px;
+ color: white ;
+}
+/* fin de styller les bouttons */
+/* styler la page d'accueil */
+#accueil{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  padding-top: 24vh;
+  padding-bottom: 24vh;
+  background-color: #333;
+  background-image: url("pexels-cottonbro-studio-4065876.jpg"); 
+  text-align: center;
+  font-size: 12px;
+} 
+.text_1{
+  color: white ;
+  font-size: 50px;
+  font-family: 'Merienda';
+  text-shadow: 2px 2px 4px #000000;
+}    
+
+#a_propos{
+  padding-top: 6vh;
+  padding-bottom: 6vh;
+  text-align: center;
+  background-color: whitesmoke;   
+}
+
+.logo_1{
+  font-family: 'Dancing Script', 'cursive';
+  color: #050505;
+  font-size: 30px;
+  text-decoration: none;
+}
+.parag_1{
+  max-width: 50rem;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  font-size: 17px;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;;
+  color: #050505;
+  text-align: center;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+#contact{
+  display: grid;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 9vh;
+  padding-bottom: 9vh;
+} 
+
+#contact .container_box{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+  gap: 15px;
+}  
+#contact .container__box .box{
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 5px 5px 6px #333;
+  text-align: center;
+  padding: 20px 30px;
+}
+#contact .container_box .box .title2{
+  text-align: center;
+  display: flex;
+  font-size: 20px;
+  font-family: 'Merienda';
+  color: goldenrod;
+  margin-left:1rem;
+  margin-right:1rem;
+}
+.button_2{
+  margin-left: 10rem;
+  align-items: center;
+  background-color: goldenrod;
+  border: 0.10em solid goldenrod;
+  color: white ;
+  font-family: 'Merienda';
+  border-radius: 2rem;
+  padding: 1rem 1rem;
+  margin: 1rem;
+  font-size: 18px;
+  cursor: pointer;
+}
+.pag_2{
+  font-size: 18px;
+  font-family: 'Merienda';
+  color: #050505;
+  text-align: center;
+}
+/*.button_2:hover{
+  letter-spacing: 0.5px;
+} */
+
+
+
+
+/* styler la barre de navigation */
+
+header {
+  background-color: #050505;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  height: 76px;
+  z-index: 1000;
+  top:0; left:0; right:0;
+  
+}
+.logo{
+  margin-left: 6rem;
+  float : left;
+  font-family: 'Dancing Script', 'cursive';
+  cursor: pointer;
+  color: white;
+  font-size: 30px;
+  text-decoration: none;
+}
+
+/*manipulation de la barre de navigation mobile*/
+.nav-toggle {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+.nav-toggle-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 2em;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  display: block;
+  background: white;
+  height: 2px;
+  width: 2em;
+  border-radius: 2px;
+  position: relative;
+}
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+.nav-toggle-label span::before {
+  bottom: 7px;
+}
+.nav-toggle-label span::after {
+  top: 7px;
+}
+nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  background-color: #050505;
+  width: 100%;
+  transform: scale(1, 0);
+  transform-origin: top;
+  transition: transform 400ms ease-in-out;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+nav li {
+  margin-bottom: 1em;
+  margin-left: 1em;
+}
+nav a {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding: 0 9px;
+}
+nav a:after{
+  content: '';
+  position: absolute;
+  height: 2px;
+  background: white;
+  position: absolute;
+  width: 0;
+  bottom: -10px;
+  left: 0;
+  right: 0;
+  transition: 0.3s;
+}
+
+nav a:hover:after {
+  width: 100%;
+} 
+
+.nav-toggle:checked ~ nav {
+  transform: scale(1,1);
+}
+
+.nav-toggle:checked ~ nav a {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out 250ms;
+}
+
+@media screen and (min-width: 889px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
+  }
+  
+  .logo {
+    grid-column: 2 / 4;
+  }
+  
+  nav {
+    position: relative;
+    text-align: left;
+    transition: none;
+    transform: scale(1,1);
+    background: none;
+    top: initial;
+    left: initial;
+    
+    grid-column: 3 / 4;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  nav ul {
+    display: flex;
+  }
+  
+  nav li {
+    margin-left: 3em;
+    margin-bottom: 0;
+  }
+  
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+  
+  nav a::before {
+    content: '';
+    display: block;
+    height: 5px;
+    background: black;
+    position: absolute;
+    top: -.75em;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+  
+  nav a:hover::before {
+    transform: scale(1,1);
+  }
+}
+/*fin de la nav mobile*/
+
+
+/* styler le footer*/
+.footer-basic {
+  padding-top: 4vh;
+  padding-bottom: 4vh;
+  background-color:#050505;
+  color:white;
+} 
+.footer-basic ul {
+  padding:0;
+  list-style:none;
+  text-align:center;
+  font-size:18px;
+  line-height:1.6;
+  margin-bottom:0;
+}
+.footer-basic li {
+  padding:0 10px;
+}  
+.footer-basic ul a {
+  color:inherit;
+  text-decoration:none;
+  opacity:0.8;
+} 
+.footer-basic ul a:hover {
+  opacity:1;
+} 
+.footer-basic .social {
+  text-align:center;
+  padding-bottom:25px;
+}
+.footer-basic .social > a {
+  font-size:24px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  display:inline-block;
+  text-align:center;
+  border-radius:50%;
+  border:0.5px solid white;
+  margin:0 8px;
+  color:inherit;
+  opacity:0.75;
+}
+.list-inline-item{
+  display: inline-block;
+  margin-right: 1rem;
+} 
+.footer-basic .social > a:hover {
+  opacity:0.9;
+} 
+.footer-basic .copyright {
+  margin-top:15px;
+  text-align:center;
+  font-size:13px;
+  color:white;
+  margin-bottom:0;
+}
+/*fin de style du footer*/
+
+/* styler la page d'admin */
+.users_page{
+  padding-top: 16vh;
+  padding-bottom: 16vh;
+  background-color: whitesmoke;
+}
+.container_admin{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.admin_sec{
+  background-size: 100% 100%;
+  padding-top:16vh;
+  padding-bottom: 16vh;
+  background-color: whitesmoke;
+}
+.title_admin{
+  padding: auto;
+  text-align: center;
+  display: flex;
+  font-size: 40px;
+  font-family: 'Merienda';
+  color: goldenrod;
+}
+.link-text {
+  margin: 0 1.5rem;
+  color: white;
+}
+.nav_admin {
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  width: 2rem;
+  height:50%;
+  background-color: #8a307f;
+}
+.nav_admin-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav_admin-nav-item {
+  width: 100%;
+}
+.nav_admin-item:last-child {
+  margin-top: auto;
+}
+.nav_admin-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  color: white;
+}
+.link-text {
+  display: none;
+  margin-left: 1rem;
+}
+.nav_admin-link  {
+  min-width: 2rem;
+  margin: 0 1.5rem;
+}
+.nav_admin:hover {
+  width: 65rem;
+}
+.nav_admin:hover .link-text {
+  display: block;
+}
+/* fin de la page d'admin */
+

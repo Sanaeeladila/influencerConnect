@@ -1,0 +1,65 @@
+/* importer les polices */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
+/* styler la page d'affichage des collaborateurs */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: #f7f7f7;
+    padding: 0 10px;
+    background-image:
+      linear-gradient(
+      45deg,
+      #8a307f,
+      white,
+      #17202E
+    );
+}
+h1{
+    text-align: center;
+    font-size: 45px;
+    color: goldenrod;
+    margin-top: 23px;
+    font-family: 'Merienda';
+}
+.row{
+    margin-left: 2rem;
+    display: inline-block;
+    justify-content: space-between;
+    margin-top: 3rem;
+    text-align: center;
+    padding: 25px 25px;
+    background: #fff;
+    max-width: 350px;
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 0 128px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+.row img{
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.row header{
+    font-size: 25px;
+    font-weight: 600;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e6e6e6;
+}
+.row p{
+    color: black;
+    align-items: center;
+    padding-top: 8px;
+    line-height: 22px;
+    font-family: 'Merienda';
+}
