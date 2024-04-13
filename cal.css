@@ -1,0 +1,30 @@
+.cal_calendrier
+{ 
+    color: white;
+    border:1px solid #050505;
+    padding:1px;
+    background: color #050505;;
+    width:250px;
+    margin:auto;
+    height:200px;
+    text-align: center;
+}
+.cal_calendrier th
+{
+    border:1px solid #050505;
+    background-color:#050505;
+}
+.cal_calendrier td
+{
+    border:1px solid #050505;
+    background-color:#050505;
+    text-align:center;
+}
+.cal_aujourdhui
+{
+    color: goldenrod;
+}
+.cal_jours_av_ap
+{
+    color:#050505;
+}
